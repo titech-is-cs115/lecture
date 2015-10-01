@@ -1,0 +1,62 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script src="{{ site.baseurl }}/js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript">
+    var master = 'https://github.com/wakita/gldojo/tree/master';
+    var re_sb = /^sb.*\.[ch]pp$/;
+    var re_sn = /^sn.*\.[ch]pp$/;
+    var re_shader = /^(.*)\.((?:vs|tcs|tes|gs|fs)(?:,(?:vs|tcs|tes|gs|fs))*)$/;
+
+    $(function () {
+      $('em').get().forEach(function (em) {
+        var $em = $(em);
+        var text = $em.text();
+        var m;
+
+        if (re_sb.exec(text)) {
+          $em.after($('<a>').attr('href', '/sb/' + text).text(text));
+        } else if (re_sn.exec(text)) {
+          $em.after($('<a>').attr('href', '/sn/' + text).text(text));
+        } else if (m = re_shader.exec(text)) {
+          var name = m[1], exts = m[2].split(',');
+          exts.reverse().forEach(function (ext, i) {
+            if (i > 0) $em.after(', ');
+            $em.after(
+              $('<a>').attr('href', '' + name + '.' + ext)
+              .text(ext.toUpperCase()));
+          });
+        } else return;
+
+        $em.remove();
+      });
+
+      $('img[src=""]').attr('src', function (i, href) {
+        return '{{ site.baseurl }}/media/img/' + this.alt + '.png';
+      });
+
+      var re_master = /^\/(bin|cb|include|media|sb|shaders|sn)/;
+      var re_github = /^\/github(.*)/;
+
+      $("a[href^='/']").attr('href', function (i, href) {
+        console.log(href);
+        if (re_master.exec(href)) return master + href;
+        else if (m = re_github.exec(href)) return master + m[1];
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/css/pygments.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/atom+xml" title="OpenGL SuperBible 道場" href="feed.xml" />
+</head>
