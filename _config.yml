@@ -2,7 +2,7 @@
 title: 2015年度後期 計算機科学第一
 description: > # this means to ignore newlines until "baseurl:"
   青谷先生が担当された計算機科学概論演習に続いて，Scalaを用いたプログラミングについて学びましょう．
-url: "http://wakita.github.io"
+url: "https://titech-is-cs115.github.io/"
 baseurl: "/lecture" # the subpath of your site, e.g. /blog/
 
 author: 脇田建
