@@ -37,3 +37,10 @@ layout: page
 
 - [シラバス](/lecture/)
 <!-- - [サポートサイト](https://github.com/titech-is-cs115/lecture) -->
+
+-----
+
+# スタッフのための情報
+
+- [Classroom](https://classroom.github.com/)
+- [Classroom guide](https://education.github.com/guide/repository_setup)
