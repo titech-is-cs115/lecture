@@ -13,7 +13,7 @@ layout: page
 
 # 授業計画
 
-1. プログラム，コンパイラ，実行可能形式: [スライド](lx1.pdf)，[サンプルコードと課題](/lx1/)
+1. プログラム，コンパイラ，実行可能形式: [スライド](https://github.com/titech-is-cs115/lecture/blob/master/01.pdf)，[サンプルコードと課題](https://github.com/titech-is-cs115/lecture/tree/master/01a)
 1. 単体テスト，テスト駆動開発
 1. デバッグ，デバッガの利用
 1. 数値データ，浮動小数点数の表現，誤差と誤差の蓄積
