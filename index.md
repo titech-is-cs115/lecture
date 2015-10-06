@@ -35,8 +35,7 @@ layout: page
 
 # 資料
 
-- [シラバス](/lecture/)
-<!-- - [サポートサイト](https://github.com/titech-is-cs115/lecture) -->
+- [リポジトリ](https://github.com/titech-is-cs115/lecture)
 
 -----
 
