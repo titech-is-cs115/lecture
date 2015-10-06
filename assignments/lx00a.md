@@ -1,5 +1,5 @@
 ---
-title: Assignment lx00A
+title: Assignment LX00A
 layout: page
 ---
 
