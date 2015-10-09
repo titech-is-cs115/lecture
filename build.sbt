@@ -1,6 +1,6 @@
 // 重要な注意：各設定の間に必ず空行を挿入して下さい。これをしないと sbt が起動しません。
 
-name := "cs1-lx00a"      // プロジェクトの名称
+name := "cs1-lecture"      // プロジェクトの名称
 
 version := "0.1.0"       // プロジェクトのバージョン番号
 
@@ -15,7 +15,12 @@ scalacOptions ++=        // scalac に与えるオプション
 javaOptions in run ++=   // 仮想機械に与えるオプション
   Seq( "-Xmx2G", "-verbose:gc")                          
 
-libraryDependencies +=   // プロジェクトで使う非標準 Scala ライブラリ
+// プロジェクトで使う非標準 Scala ライブラリ
+
+libraryDependencies +=  // テストのために使う ScalaTest ライブラリ
+  "org.scalatest" % "scalatest_2.11" % "3.0.0-M9"
+
+libraryDependencies +=  // JSONデータを扱うためのライブラリ
   "net.liftweb" % "lift-json_2.11" % "3.0-M6"
 
 // sbt の挙動の設定
