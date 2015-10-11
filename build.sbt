@@ -18,7 +18,7 @@ javaOptions in run ++=   // 仮想機械に与えるオプション
 // プロジェクトで使う非標準 Scala ライブラリ
 
 libraryDependencies +=  // テストのために使う ScalaTest ライブラリ
-  "org.scalatest" % "scalatest_2.11" % "3.0.0-M9"
+  "org.scalatest" % "scalatest_2.11" % "2.2.5"
 
 libraryDependencies +=  // JSONデータを扱うためのライブラリ
   "net.liftweb" % "lift-json_2.11" % "3.0-M6"
