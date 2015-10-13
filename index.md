@@ -14,7 +14,7 @@ layout: page
 # 授業計画
 
 1. プログラム，コンパイラ，実行可能形式: [スライド](https://github.com/titech-is-cs115/lecture/blob/master/01.pdf)，[サンプルコード](https://github.com/titech-is-cs115/lecture/tree/master/01a)，[課題と宿題](https://titech-is-cs115.github.io/lecture/assignments/lx00a)
-1. 単体テスト，テスト駆動開発
+1. 単体テスト，テスト駆動開発: [スライド](https://github.com/titech-is-cs115/lecture/blob/master/02.pdf), [課題と宿題](https://github.com/titech-is-cs115/lx02)
 1. デバッグ，デバッガの利用
 1. 数値データ，浮動小数点数の表現，誤差と誤差の蓄積
 1. システムの状態と変数
