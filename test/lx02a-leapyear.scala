@@ -9,4 +9,10 @@ class LX02ATest extends FlatSpec with Matchers {
     leapyear(2004) should be (true)
     leapyear(2008) should be (true)
   }
+
+  "leapyear" should "be false for 4で割り切れない年" in {
+    leapyear(2001) should be (false)
+    leapyear(2002) should be (false)
+    leapyear(2003) should be (false)
+  }
 }
