@@ -17,6 +17,7 @@ layout: page
 1. 単体テスト，テスト駆動開発: [スライド](https://github.com/titech-is-cs115/lecture/blob/master/02.pdf), [課題と宿題](https://github.com/titech-is-cs115/lx02)
 1. デバッグ，デバッガの利用:  [スライド](https://github.com/titech-is-cs115/lecture/blob/master/03.pdf), プログラム集 (`src/lx03[a-e].scala`)
 1. 数値データ，浮動小数点数の表現，誤差と誤差の蓄積
+1. Scalaのプログラム（モジュール，パッケージ，trait，多相性）: [解説](lx05)
 1. システムの状態と変数
 1. 変数を用いたプログラムのデザインレシピ
 1. 状態変化を伴うプログラミング
