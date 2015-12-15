@@ -1,6 +1,6 @@
 // 重要な注意：各設定の間に必ず空行を挿入して下さい。これをしないと sbt が起動しません。
 
-name := "cs1-lecture"      // プロジェクトの名称
+name := "lecture"      // プロジェクトの名称
 
 version := "0.1.0"       // プロジェクトのバージョン番号
 
@@ -40,4 +40,4 @@ scalaSource in Test := baseDirectory.value / "test"
 
 // コンパイル結果を非標準の場所に設定
 
-target := Path.userHome / "tmp" / "cs1f"
+target := Path.userHome / "tmp" / "cs1f" / name.value
