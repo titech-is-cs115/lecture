@@ -16,12 +16,13 @@ object ThreadSample2 extends JFXApp {
   val canvas = new Canvas(W, H)
   val gc = canvas.graphicsContext2D
 
+  var finish = false
   val lock = new AnyRef
 
   // 雨
   new Thread {
     override def run() {
-      while (true) {
+      while (!finish) {
         lock.synchronized {
           for (i <- 0 to 3) {
             val x = nextInt(W)
@@ -42,7 +43,7 @@ object ThreadSample2 extends JFXApp {
     var dir = 1
     val speed = 180 / 30
     override def run() {
-      while (true) {
+      while (!finish) {
         val t1 = angle
         val t2 = angle + speed * dir
         lock.synchronized {
@@ -63,4 +64,6 @@ object ThreadSample2 extends JFXApp {
     height = H
     scene = new Scene { root = new Group(canvas) }
   }
+
+  override def stopApp() { finish = true }
 }
