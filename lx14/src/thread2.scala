@@ -44,11 +44,9 @@ object ThreadSample2 extends JFXApp {
     val speed = 180 / 30
     override def run() {
       while (!finish) {
-        val t1 = angle
-        val t2 = angle + speed * dir
         lock.synchronized {
           gc.fill = White
-          gc.fillArc(0, 0, W, H * 2, t1, speed * dir, ArcType.Round)
+          gc.fillArc(0, 0, W, H * 2, angle, speed * dir, ArcType.Round)
         }
         angle = angle + speed * dir
         if (angle < 0) { angle = 0; dir = 1 }
